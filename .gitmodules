@@ -1,0 +1,6 @@
+[submodule "duft-server"]
+	path = duft-server
+	url = https://github.com/UCSF-IGHS/duft-server-django
+[submodule "duft-config"]
+	path = duft-config
+	url = https://github.com/UCSF-IGHS/duft-config
