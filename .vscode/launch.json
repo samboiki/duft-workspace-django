@@ -13,7 +13,11 @@
             ],
             "django": true,
             "autoStartBrowser": false,
-            "program": "${workspaceFolder}/duft-server/manage.py"
+            "program": "${workspaceFolder}/duft-server/manage.py",
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "app.settings",
+                "$DUFT_CONFIG$": "TREMOR"
+            },            
         }
     ]
 }
