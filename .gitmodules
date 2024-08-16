@@ -4,3 +4,5 @@
 [submodule "duft-config"]
 	path = duft-config
 	url = https://github.com/UCSF-IGHS/duft-config
+[submodule "path/to/submodule"]
+	url = https://github.com/UCSF-IGHS/duft-server
