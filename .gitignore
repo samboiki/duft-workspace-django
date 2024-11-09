@@ -1,4 +1,6 @@
 .DS_Store
+tmp-data-tasks/
+uploads/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

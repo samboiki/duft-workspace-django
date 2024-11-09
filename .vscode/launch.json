@@ -18,6 +18,20 @@
                 "DJANGO_SETTINGS_MODULE": "app.settings",
                 "$DUFT_CONFIG$": "TREMOR"
             },
-        }
+        },
+        {
+            "name": "Python: Tests",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/duft-servermanage.py",
+            "args": [
+                "test"
+            ],
+            "django": true,
+            "env": {
+                "DJANGO_SETTINGS_MODULE": "app.settings",
+                "FEATURE_SERVER_UPLOADS": "True"
+            }
+        }        
     ]
 }
