@@ -7,5 +7,16 @@
 	"launch": {
 		"version": "0.2.0",
 		"configurations": []
+	},
+	"settings": {
+		"sqltools.useNodeRuntime": true,
+		"sqltools.connections": [
+			{
+				"previewLimit": 50,
+				"driver": "SQLite",
+				"database": "wakanda.sqlite",
+				"name": "Wakanda"
+			}
+		]
 	}
 }
