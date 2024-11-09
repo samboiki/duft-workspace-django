@@ -6,3 +6,6 @@
 	url = https://github.com/UCSF-IGHS/duft-config
 [submodule "path/to/submodule"]
 	url = https://github.com/UCSF-IGHS/duft-server
+[submodule "duft-docs"]
+	path = duft-docs
+	url = https://github.com/UCSF-IGHS/duft-docs
