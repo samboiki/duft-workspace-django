@@ -9,3 +9,6 @@
 [submodule "duft-docs"]
 	path = duft-docs
 	url = https://github.com/UCSF-IGHS/duft-docs
+[submodule "duft-ui"]
+	path = duft-ui
+	url = https://github.com/UCSF-IGHS/duft-ui
