@@ -17,13 +17,13 @@
             "env": {
                 "DJANGO_SETTINGS_MODULE": "app.settings",
                 "$DUFT_CONFIG$": "TREMOR"
-            },
+            }
         },
         {
             "name": "Python: Tests",
             "type": "debugpy",
             "request": "launch",
-            "program": "${workspaceFolder}/duft-servermanage.py",
+            "program": "${workspaceFolder}/duft-server/manage.py",
             "args": [
                 "test"
             ],
@@ -32,6 +32,22 @@
                 "DJANGO_SETTINGS_MODULE": "app.settings",
                 "FEATURE_SERVER_UPLOADS": "True"
             }
-        }        
+        },
+        {
+            "name": "yarn dev: duft-ui",
+            "type": "node",
+            "request": "launch",
+            "runtimeExecutable": "yarn",
+            "args": ["dev"],
+            "cwd": "${workspaceFolder}/duft-ui",
+            "console": "integratedTerminal"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Start Backend and Frontend",
+            "configurations": ["Python Debugger: Django", "yarn dev: duft-ui"],
+            "stopAll": true
+        }
     ]
 }
