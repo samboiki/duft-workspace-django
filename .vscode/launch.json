@@ -16,7 +16,7 @@
             "program": "${workspaceFolder}/duft-server/manage.py",
             "env": {
                 "DJANGO_SETTINGS_MODULE": "app.settings",
-                "$DUFT_CONFIG$": "TREMOR"
+                "__DUFT_CONFIG__2": "TREMOR"
             }
         },
         {
@@ -30,7 +30,6 @@
             "django": true,
             "env": {
                 "DJANGO_SETTINGS_MODULE": "app.settings",
-                "FEATURE_SERVER_UPLOADS": "True"
             }
         },
         {
