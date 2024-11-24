@@ -12,3 +12,6 @@
 [submodule "duft-ui"]
 	path = duft-ui
 	url = https://github.com/UCSF-IGHS/duft-ui
+[submodule "flowbite-react"]
+	path = flowbite-react
+	url = https://github.com/themesberg/flowbite-react
