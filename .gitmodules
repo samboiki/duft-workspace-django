@@ -5,7 +5,8 @@
 	path = duft-config
 	url = https://github.com/UCSF-IGHS/duft-config
 [submodule "path/to/submodule"]
-	url = https://github.com/UCSF-IGHS/duft-server
+	url = https://github.com/UCSF-IGHS/flowbite-pro-react-admin-dashboard-main
+	path = path/to/submodule
 [submodule "duft-docs"]
 	path = duft-docs
 	url = https://github.com/UCSF-IGHS/duft-docs
