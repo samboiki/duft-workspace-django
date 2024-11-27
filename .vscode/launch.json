@@ -1,52 +1,57 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-        {
-            "name": "Python Debugger: Django",
-            "type": "debugpy",
-            "request": "launch",
-            "args": [
-                "runserver"
-            ],
-            "django": true,
-            "autoStartBrowser": false,
-            "program": "${workspaceFolder}/duft-server/manage.py",
-            "env": {
-                "DJANGO_SETTINGS_MODULE": "app.settings",
-                "__DUFT_CONFIG__2": "TREMOR"
-            }
-        },
-        {
-            "name": "Python: Tests",
-            "type": "debugpy",
-            "request": "launch",
-            "program": "${workspaceFolder}/duft-server/manage.py",
-            "args": [
-                "test"
-            ],
-            "django": true,
-            "env": {
-                "DJANGO_SETTINGS_MODULE": "app.settings",
-            }
-        },
-        {
-            "name": "yarn dev: duft-ui",
-            "type": "node",
-            "request": "launch",
-            "runtimeExecutable": "yarn",
-            "args": ["dev"],
-            "cwd": "${workspaceFolder}/duft-ui",
-            "console": "integratedTerminal"
+      {
+        "name": "Python Debugger: Django",
+        "type": "debugpy",
+        "request": "launch",
+        "args": ["runserver"],
+        "django": true,
+        "autoStartBrowser": false,
+        "program": "${workspaceFolder}/duft-server/manage.py",
+        "env": {
+          "DJANGO_SETTINGS_MODULE": "app.settings",
+          "__DUFT_CONFIG__2": "TREMOR"
         }
+      },
+      {
+        "name": "Python: Tests",
+        "type": "debugpy",
+        "request": "launch",
+        "program": "${workspaceFolder}/duft-server/manage.py",
+        "args": ["test"],
+        "django": true,
+        "env": {
+          "DJANGO_SETTINGS_MODULE": "app.settings"
+        }
+      },
+      {
+        "name": "yarn dev: duft-ui",
+        "type": "node",
+        "request": "launch",
+        "runtimeExecutable": "yarn",
+        "args": ["dev"],
+        "cwd": "${workspaceFolder}/duft-ui",
+        "console": "integratedTerminal"
+      },
+      {
+        "name": "Attach to Vite Frontend",
+        "type": "chrome",
+        "request": "launch",
+        "url": "http://localhost:3031", // Vite's default port
+        "webRoot": "${workspaceFolder}/duft-ui/src", // Path to React source files
+        "sourceMaps": true,
+        "trace": true,
+        "sourceMapPathOverrides": {
+          "vite:///*": "${webRoot}/*"
+        }
+      }
     ],
     "compounds": [
-        {
-            "name": "Start Backend and Frontend",
-            "configurations": ["Python Debugger: Django", "yarn dev: duft-ui"],
-            "stopAll": true
-        }
+      {
+        "name": "Start Backend and Frontend",
+        "configurations": ["Python Debugger: Django", "yarn dev: duft-ui", "Attach to Vite Frontend"],
+        "stopAll": true
+      }
     ]
-}
+  }
