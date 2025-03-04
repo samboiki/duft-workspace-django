@@ -14,3 +14,6 @@
 	path = flowbite-react
 	url = https://github.com/themesberg/flowbite-react
 
+[submodule "duft-config-wakanda"]
+	path = duft-config-wakanda
+	url = https://github.com/UCSF-IGHS/duft-config-wakanda
