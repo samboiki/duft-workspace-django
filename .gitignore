@@ -167,3 +167,4 @@ cython_debug/
 # Unit Test Outputs
 sample_task_from_root.py
 update.py
+.vscode/settings.json
