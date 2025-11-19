@@ -1,19 +1,38 @@
 [submodule "duft-server"]
-	path = duft-server
-	url = https://github.com/UCSF-IGHS/duft-server-django
+    path = duft-server
+    url = https://github.com/MoHSS-NDW/duft-server-django
 [submodule "duft-config"]
-	path = duft-config
-	url = https://github.com/UCSF-IGHS/duft-config
+    path = duft-config
+    url = https://github.com/MoHSS-NDW/duft-config
 [submodule "duft-docs"]
-	path = duft-docs
-	url = https://github.com/UCSF-IGHS/duft-docs
+    path = duft-docs
+    url = https://github.com/MoHSS-NDW/duft-docs
 [submodule "duft-ui"]
-	path = duft-ui
-	url = https://github.com/UCSF-IGHS/duft-ui
+    path = duft-ui
+    url = https://github.com/MoHSS-NDW/duft-ui
 [submodule "flowbite-react"]
-	path = flowbite-react
-	url = https://github.com/themesberg/flowbite-react
-
+    path = flowbite-react
+    url = https://github.com/themesberg/flowbite-react
 [submodule "duft-config-wakanda"]
-	path = duft-config-wakanda
-	url = https://github.com/UCSF-IGHS/duft-config-wakanda
+    path = duft-config-wakanda
+    url = https://github.com/MoHSS-NDW/duft-config-wakanda
+# [submodule "duft-server"]
+# 	path = duft-server
+# 	url = https://github.com/UCSF-IGHS/duft-server-django
+# [submodule "duft-config"]
+# 	path = duft-config
+# 	url = https://github.com/UCSF-IGHS/duft-config
+# [submodule "duft-docs"]
+# 	path = duft-docs
+# 	url = https://github.com/UCSF-IGHS/duft-docs
+# [submodule "duft-ui"]
+# 	path = duft-ui
+# 	url = https://github.com/UCSF-IGHS/duft-ui
+# [submodule "flowbite-react"]
+# 	path = flowbite-react
+# 	url = https://github.com/themesberg/flowbite-react
+
+# [submodule "duft-config-wakanda"]
+# 	path = duft-config-wakanda
+# 	url = https://github.com/UCSF-IGHS/duft-config-wakanda
+
