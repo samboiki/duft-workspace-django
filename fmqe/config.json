@@ -1,0 +1,86 @@
+{
+    "dataConnectionParameters": {
+        "PostgreSQL": {
+            "server": "127.0.0.1",
+            "username": "postgres",
+            "password": "postgres",
+            "port": "5432",
+            "database": "qe_data",
+            "type": "PostgreSQL"
+        },
+        "FileMaker": {
+            "type": "filemaker",
+            "server": "jdbc:filemaker://localhost/QuantumMaxuililiClinic",
+            "username": "Administrator",
+            "password": "Qepms!@dmin",
+            "driver_jar": "fmjdbc.jar",
+            "driver_class": "com.filemaker.jdbc.Driver"
+        }
+    },
+    "schemas": {
+        "staging": "fm_staging",
+        "production": "fm_data"
+    },
+    "tables": [
+        {
+            "name": "pat",
+            "query": "SELECT id, artnumber, artnumberlegacy, devCreationTimestamp, devModificationTimestamp FROM pat",
+            "primary_key": "id",
+            "audit_columns": ["devCreationTimestamp", "devModificationTimestamp"]
+        },
+        {
+            "name": "cd",
+            "query": "SELECT idpatient, hivconfirmationdate, hivconfirmatoryresultsdate, hivconfirmatoryresultstype, idfacilitycreate, fullDisclosureDAte, hivenrolleddate, disclosureenrollmentdate, arteligiblereason, artstartdate, idfacilityARTStart, devCreationTimestamp, devModificationTimestamp FROM Cd",
+            "primary_key": "idpatient",
+            "audit_columns": ["devCreationTimestamp", "devModificationTimestamp"]
+        },
+        {
+            "name": "fup",
+            "query": "SELECT id, idpatient, idfacilitycreate, visitDate, followupDate, scheduledDate, careModel, pregnantstatus, Breastfeeding, pregnantlmp, pregnantedd, ctxadherence, arvadherence, oiDetail, oiOther, tbScreenResult, devCreationTimestamp, devModificationTimestamp FROM Fup",
+            "primary_key": "id",
+            "audit_columns": ["devCreationTimestamp", "devModificationTimestamp"]
+        },
+        {
+            "name": "tsfr",
+            "query": "SELECT idpatient, status, \"date\", devCreationTimestamp, devModificationTimestamp FROM tsfr",
+            "primary_key": "idpatient",
+            "audit_columns": ["devCreationTimestamp", "devModificationTimestamp"]
+        },
+        {
+            "name": "meas",
+            "query": "SELECT idpatient, CAST(weight AS varchar) AS weight, whoStage, \"Date\", devCreationTimestamp, devModificationTimestamp FROM Meas",
+            "primary_key": null,
+            "audit_columns": ["devCreationTimestamp", "devModificationTimestamp"]
+        },
+        {
+            "name": "rgm",
+            "query": "SELECT idpatient, idfacilitycreate, \"date\", type, line, code, dosage, duration, reason, devCreationTimestamp, devModificationTimestamp FROM rgm",
+            "primary_key": null,
+            "audit_columns": ["devCreationTimestamp", "devModificationTimestamp"]
+        },
+        {
+            "name": "ti",
+            "query": "SELECT idpatient, idfacilitycreate, interruptionDate, CAST(interruptionReason AS VARCHAR) AS interruptionReason, interruptionReasonOther, restartDate, duration, devCreationTimestamp, devModificationTimestamp FROM ti",
+            "primary_key": null,
+            "audit_columns": ["devCreationTimestamp", "devModificationTimestamp"]
+        },
+        {
+            "name": "tbt",
+            "query": "SELECT idpatient, idfacilitycreate, category, startDate, regimen, duration, stopDateExpected, stopDateActual, registrationNumber, site, siteDetail, CASE WHEN outcome = '1' THEN 'Cured' WHEN outcome = '2' THEN 'Treatment complete' WHEN outcome = '3' THEN 'Died' WHEN outcome = '4' THEN 'Failure' WHEN outcome = '5' THEN 'Lost to follow-up' WHEN outcome = '6' THEN 'Not evaluated' END AS outcome, devCreationTimestamp, devModificationTimestamp FROM tbt",
+            "primary_key": null,
+            "audit_columns": ["devCreationTimestamp", "devModificationTimestamp"]
+        },
+        {
+            "name": "tpt",
+            "query": "SELECT idpatient, idfacilitycreate, startDate, regimen, duration, outcome, devCreationTimestamp, devModificationTimestamp FROM tpt",
+            "primary_key": null,
+            "audit_columns": ["devCreationTimestamp", "devModificationTimestamp"]
+        },
+        {
+            "name": "lab",
+            "query": "SELECT l.id, l.idpatient, l.idfacilitycreate, l.orderDate, l.result, CAST(l.resultDate AS VARCHAR) as resultDate, lm.name as test_name, l.status, l.devCreationTimestamp, l.devModificationTimestamp FROM lab l INNER JOIN LabMaster lm ON lm.id=l.idtest",
+            "primary_key": "id",
+            "audit_columns": ["devCreationTimestamp", "devModificationTimestamp"]
+        }
+    ]
+}
