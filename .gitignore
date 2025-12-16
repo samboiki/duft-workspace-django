@@ -168,3 +168,15 @@ cython_debug/
 sample_task_from_root.py
 update.py
 .vscode/settings.json
+
+# Claude Code local settings
+.claude/settings.local.json
+
+# Ignore local JDK installs
+/java/jdk-21.0.4+7/
+/java/jdk-*/
+
+# Installer files
+*.exe
+*.zip
+nul
